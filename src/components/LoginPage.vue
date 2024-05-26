@@ -9,12 +9,11 @@
           <label for="password" class="form-label">Password</label>
           <input type="password" name="password" id="password" class="form-control" placeholder=""/>
         </div>
-        <div class="mb-4">
-          <label for="re_password" class="form-label">Re Password</label>
-          <input type="password" name="re_password" id="re_password" class="form-control" placeholder=""/>
+        <div class="mb-4 href">
+            <router-link to="/form/sign_up" class="router_link">Don't have an account?</router-link>
         </div>
         <div>
-          <input type="submit" value="Sign Up" class="btn"/>
+          <input type="submit" value="Sign In" class="btn"/>
         </div>
       </form>
   </div>
@@ -40,5 +39,15 @@ export default {
 
   .btn:hover {
     color: #000
+  }
+
+  .href {
+      text-align: right;;
+  }
+
+  .router_link {
+    color: #898CA9;
+    font-size: 14px;
+    text-decoration: none;
   }
 </style>
