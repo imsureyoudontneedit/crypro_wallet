@@ -3,6 +3,7 @@ import FormsPage from '@/views/FormsPage.vue'
 import LoginPage from '@/components/LoginPage.vue'
 import RegPage from '@/components/RegPage.vue'
 import ProfilePage from '@/views/ProfilePage.vue'
+import SendToken from '@/components/SendToken.vue'
 
 const routes = [
   {
@@ -37,7 +38,8 @@ const routes = [
       },
       {
         path: 'withdraw',
-        name: 'withdraw'
+        name: 'withdraw',
+        component: SendToken
       },
       {
         path: 'deposit',

@@ -52,7 +52,7 @@ h1 {
   font-family: 'Montserrat Bold';
 }
 
-h2 {
+h4 {
   font-family: 'Montserrat SemiBold';
 }
 
