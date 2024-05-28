@@ -6,7 +6,9 @@
 </template>
 
 <script>
-// import Web3 from 'web3'
+import Web3 from 'web3'
+
+import BankAbi from "@/assets/Bank.json";
 
 export default {
   components: {
@@ -14,7 +16,10 @@ export default {
   },
   data() {
     return {
-      // web3: new Web3(window.ethereum),
+      web3: new Web3(window.ethereum),
+      contractAddress: "0x05B1BDfEB940218E143C75711Ab9313aDfd8127d",
+      // abi: JSON.parse(BankAbi['abi']),
+      contract: this.web3.eth.Contract(this.abi, this.contractAddress),
       connected: false,
     }
   },

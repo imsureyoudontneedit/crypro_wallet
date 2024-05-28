@@ -14,7 +14,7 @@
                     <input type="value" class="form-control" required id="to" placeholder="Account ID"> 
                 </div>
                 <div class="desc">
-                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temposLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo</span>
+                    <span>This transaction will not be aprove imideatly. This may take a while we check you transcactions.</span>
                 </div>
                 <button type="submit" class="btn text-center" @click="sendMoney()">REQUEST TOKEN</button>
             </form>
