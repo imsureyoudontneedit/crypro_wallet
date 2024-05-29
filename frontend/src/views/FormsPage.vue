@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <div class="page_left_side">
-      <router-link to="/index"><h1>Crypto Wallet</h1></router-link>
+      <router-link to="/"><h1>Crypto Wallet</h1></router-link>
       <router-view></router-view>
     </div>
     

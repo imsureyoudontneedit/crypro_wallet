@@ -3,12 +3,14 @@ import FormsPage from '@/views/FormsPage.vue'
 import LoginPage from '@/components/LoginPage.vue'
 import RegPage from '@/components/RegPage.vue'
 import ProfilePage from '@/views/ProfilePage.vue'
+import IndexPage from '@/views/IndexPage.vue'
 import SendToken from '@/components/SendToken.vue'
 
 const routes = [
   {
     path: '/',
-    name: 'index',
+    name: 'Crypto Wallet',
+    component: IndexPage
   },
   {
     path: '/form',
@@ -17,37 +19,37 @@ const routes = [
     children: [
       {
         path: "sign_in",
-        name: "Login Form",
+        name: "Crypto Wallet | Sign In",
         component: LoginPage
       },
       {
         path: "sign_up",
-        name: "Reg Form",
+        name: "Crypto Wallet | Sign Up",
         component: RegPage
       }
     ]  
   },
   {
     path: '/profile',
-    name: 'profile',
+    name: 'Crypto Wallet | Profile',
     component: ProfilePage,
     children: [
       {
         path: 'dashboard',
-        name: 'dashboard',
+        name: 'Crypto Wallet | Dashboard',
       },
       {
         path: 'withdraw',
-        name: 'withdraw',
+        name: 'Crypto Wallet | Withdraw',
         component: SendToken
       },
       {
         path: 'deposit',
-        name: 'deposit'
+        name: 'Crypto Wallet | Deposit'
       },
       {
         path: 'user',
-        name: 'user'
+        name: 'Crypto Wallet | Profile'
       },
     ]
   }
@@ -57,5 +59,10 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
 })
+
+router.beforeEach((to, from, next) => {
+  document.title = to.name;
+  next();
+});
 
 export default router
