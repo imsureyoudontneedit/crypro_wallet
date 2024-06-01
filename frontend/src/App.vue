@@ -1,6 +1,9 @@
 <template>
   <div class="wrapper">
-    <!-- <button v-if="!connected" @click="connect">Connect wallet</button> -->
+    <button v-if="!connected" @click="connect">Connect wallet</button>
+    <button v-if="connected" @click="callContract">Call contract</button>
+
+    {{ contractResult }}
     <router-view></router-view>
   </div>
 </template>
@@ -18,9 +21,10 @@ export default {
     return {
       web3: new Web3(window.ethereum),
       contractAddress: "0x05B1BDfEB940218E143C75711Ab9313aDfd8127d",
-      // abi: JSON.parse(BankAbi['abi']),
-      contract: this.web3.eth.Contract(this.abi, this.contractAddress),
+      abi: BankAbi,
+      // contract: this.web3.Contract(this.abi, this.contractAddress),
       connected: false,
+      contractResult: ''
     }
   },
   methods: {
@@ -32,6 +36,16 @@ export default {
           .then(() => { this.connected = true; });
       }
     },
+
+    callContract: function () {
+        // method for calling the contract method
+      let web3 = new Web3(window.ethereum);
+
+      let contract = new web3.eth.Contract(this.abi, this.contractAddress);
+
+      contract.methods.getSender().call()
+        .then(result => this.contractResult = result);
+    }
   }
 }
 </script>
