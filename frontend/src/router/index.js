@@ -5,6 +5,7 @@ import RegPage from '@/components/RegPage.vue'
 import ProfilePage from '@/views/ProfilePage.vue'
 import IndexPage from '@/views/IndexPage.vue'
 import SendToken from '@/components/SendToken.vue'
+import DashboardPage from '@/components/DashboardPage.vue'
 
 const routes = [
   {
@@ -37,6 +38,7 @@ const routes = [
       {
         path: 'dashboard',
         name: 'Crypto Wallet | Dashboard',
+        component: DashboardPage
       },
       {
         path: 'withdraw',

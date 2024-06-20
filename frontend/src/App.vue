@@ -76,7 +76,9 @@ export default {
   font-family: 'Montserrat ExtraBold';
   src: url('@/assets/fonts/Montserrat-ExtraBold.ttf');
 }
-
+body {
+  background-color:#0B0B0F;
+}
 #app {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
@@ -97,4 +99,10 @@ a {
   color: #fff;
 }
 
+.container-page{
+  width:clamp(430px, 100%, 1440px);
+  margin:0 auto;
+  
+}
 </style>
+ 

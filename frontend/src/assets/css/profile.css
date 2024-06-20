@@ -1,0 +1,24 @@
+.profile-content{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.profile-card{
+    background-color: #1c1c1c99;
+    padding: clamp(25px, 2.5vw,40px);
+    border-radius: 16px;
+}
+
+.main-card{
+    width: clamp(340px, 100%, 770px);
+}
+
+.sub-card{
+    width: clamp(280px, 100%, 280px);
+    padding: 15px;
+}
+
+.title{
+    font-size: 20px;
+}
